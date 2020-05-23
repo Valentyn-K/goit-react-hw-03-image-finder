@@ -40,7 +40,11 @@ export default class Modal extends Component {
 
   render() {
     return (
-      <div className={styles.Backdrop} onClick={this.handleBackdropClick}>
+      <div
+        className={styles.Backdrop}
+        onClick={this.handleBackdropClick}
+        ref={this.backdropRef}
+      >
         <img src={this.props.largeURL} alt="img" className={styles.Modal} />
       </div>
     );
